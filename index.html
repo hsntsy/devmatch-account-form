@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+          name="description"
+          content="Create a DevMatch developer profile."
+  >
+
+  <title>DevMatch | Create Account</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html">DevMatch</a>
+
+    <p>
+      Create your developer profile and find the right opportunities.
+    </p>
+  </div>
+</header>
+
+<main class="main-content">
+  <section class="form-card" aria-labelledby="page-title">
+
+    <div class="introduction">
+      <p class="small-heading">JOIN DEVMATCH</p>
+
+      <h1 id="page-title">Create your developer profile</h1>
+
+      <p>
+        Complete the form below to connect with developers,
+        projects and job opportunities.
+      </p>
+
+      <p class="required-message">
+        Fields marked with
+        <span aria-hidden="true">*</span>
+        are required.
+      </p>
+    </div>
+
+    <nav class="progress" aria-label="Account creation progress">
+      <ol>
+        <li>
+          <span>1</span>
+          Account
+        </li>
+
+        <li>
+          <span>2</span>
+          Profile
+        </li>
+
+        <li>
+          <span>3</span>
+          Preferences
+        </li>
+      </ol>
+    </nav>
+
+    <form action="#" method="post">
+
+      <!-- ACCOUNT SETUP -->
+      <fieldset class="form-section">
+        <legend>
+          <span class="section-number">1</span>
+          Account setup
+        </legend>
+
+        <p class="section-description">
+          Enter the information needed to create your account.
+        </p>
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="full-name">
+              Full name
+              <span aria-hidden="true">*</span>
+            </label>
+
+            <input
+                    type="text"
+                    id="full-name"
+                    name="full-name"
+                    autocomplete="name"
+                    minlength="2"
+                    maxlength="60"
+                    required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="username">
+              Username
+              <span aria-hidden="true">*</span>
+            </label>
+
+            <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    autocomplete="username"
+                    minlength="3"
+                    maxlength="20"
+                    pattern="[A-Za-z0-9_]{3,20}"
+                    aria-describedby="username-help"
+                    required
+            >
+
+            <p id="username-help" class="help-text">
+              Use 3–20 letters, numbers or underscores.
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label for="email">
+              Email address
+              <span aria-hidden="true">*</span>
+            </label>
+
+            <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    inputmode="email"
+                    aria-describedby="email-help"
+                    required
+            >
+
+            <p id="email-help" class="help-text">
+              Example: name@example.com
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone number</label>
+
+            <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    placeholder="+45 12 34 56 78"
+                    aria-describedby="phone-help"
+            >
+
+            <p id="phone-help" class="help-text">
+              Include your country code.
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label for="password">
+              Password
+              <span aria-hidden="true">*</span>
+            </label>
+
+            <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    autocomplete="new-password"
+                    minlength="8"
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}"
+                    aria-describedby="password-help"
+                    required
+            >
+
+            <p id="password-help" class="help-text">
+              Use at least 8 characters with an uppercase
+              letter, a lowercase letter and a number.
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label for="birth-date">Date of birth</label>
+
+            <input
+                    type="date"
+                    id="birth-date"
+                    name="birth-date"
+                    autocomplete="bday"
+            >
+          </div>
+
+          <div class="form-group full-width">
+            <label for="profile-photo">Profile photo</label>
+
+            <input
+                    type="file"
+                    id="profile-photo"
+                    name="profile-photo"
+                    accept=".jpg,.jpeg,.png"
+                    aria-describedby="photo-help"
+            >
+
+            <p id="photo-help" class="help-text">
+              Upload a JPG or PNG image.
+            </p>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <!-- DEVELOPER PROFILE -->
+      <fieldset class="form-section">
+        <legend>
+          <span class="section-number">2</span>
+          Developer profile
+        </legend>
+
+        <p class="section-description">
+          Tell us about your skills and experience.
+        </p>
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="primary-role">
+              Primary role
+              <span aria-hidden="true">*</span>
+            </label>
+
+            <select
+                    id="primary-role"
+                    name="primary-role"
+                    required
+            >
+              <option value="">Select your role</option>
+              <option value="frontend">
+                Frontend Developer
+              </option>
+              <option value="backend">
+                Backend Developer
+              </option>
+              <option value="fullstack">
+                Full-stack Developer
+              </option>
+              <option value="mobile">
+                Mobile Developer
+              </option>
+              <option value="devops">
+                DevOps Engineer
+              </option>
+              <option value="data-ai">
+                Data and AI Developer
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="github">
+              GitHub profile
+              <span aria-hidden="true">*</span>
+            </label>
+
+            <input
+                    type="url"
+                    id="github"
+                    name="github"
+                    inputmode="url"
+                    placeholder="https://github.com/username"
+                    pattern="https://github\.com/[A-Za-z0-9_-]+/?"
+                    aria-describedby="github-help"
+                    required
+            >
+
+            <p id="github-help" class="help-text">
+              Example: https://github.com/username
+            </p>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="portfolio">
+              Portfolio or personal website
+            </label>
+
+            <input
+                    type="url"
+                    id="portfolio"
+                    name="portfolio"
+                    inputmode="url"
+                    placeholder="https://example.com"
+            >
+          </div>
+
+          <fieldset class="choice-group full-width">
+            <legend>
+              Experience level
+              <span aria-hidden="true">*</span>
+            </legend>
+
+            <div class="choice-list">
+              <label>
+                <input
+                        type="radio"
+                        name="experience"
+                        value="student"
+                        required
+                >
+                Student or beginner
+              </label>
+
+              <label>
+                <input
+                        type="radio"
+                        name="experience"
+                        value="junior"
+                >
+                Junior: 0–2 years
+              </label>
+
+              <label>
+                <input
+                        type="radio"
+                        name="experience"
+                        value="mid"
+                >
+                Mid-level: 3–5 years
+              </label>
+
+              <label>
+                <input
+                        type="radio"
+                        name="experience"
+                        value="senior"
+                >
+                Senior: 6+ years
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice-group full-width">
+            <legend>Technologies</legend>
+
+            <p class="help-text">
+              Select the technologies you use.
+            </p>
+
+            <div class="checkbox-grid">
+              <label>
+                <input
+                        type="checkbox"
+                        name="technologies"
+                        value="html"
+                >
+                HTML
+              </label>
+
+              <label>
+                <input
+                        type="checkbox"
+                        name="technologies"
+                        value="css"
+                >
+                CSS
+              </label>
+
+              <label>
+                <input
+                        type="checkbox"
+                        name="technologies"
+                        value="javascript"
+                >
+                JavaScript
+              </label>
+
+              <label>
+                <input
+                        type="checkbox"
+                        name="technologies"
+                        value="java"
+                >
+                Java
+              </label>
+
+              <label>
+                <input
+                        type="checkbox"
+                        name="technologies"
+                        value="python"
+                >
+                Python
+              </label>
+
+              <label>
+                <input
+                        type="checkbox"
+                        name="technologies"
+                        value="sql"
+                >
+                SQL
+              </label>
+
+              <label>
+                <input
+                        type="checkbox"
+                        name="technologies"
+                        value="git"
+                >
+                Git
+              </label>
+
+              <label>
+                <input
+                        type="checkbox"
+                        name="technologies"
+                        value="docker"
+                >
+                Docker
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-group full-width">
+            <label for="developer-bio">
+              Developer bio
+              <span aria-hidden="true">*</span>
+            </label>
+
+            <textarea
+                    id="developer-bio"
+                    name="developer-bio"
+                    rows="6"
+                    minlength="20"
+                    maxlength="400"
+                    placeholder="Tell us about your experience, interests and goals."
+                    aria-describedby="bio-help"
+                    required
+            ></textarea>
+
+            <p id="bio-help" class="help-text">
+              Write between 20 and 400 characters.
+            </p>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <!-- PREFERENCES -->
+      <fieldset class="form-section">
+        <legend>
+          <span class="section-number">3</span>
+          Preferences and availability
+        </legend>
+
+        <p class="section-description">
+          Tell us what kind of opportunity you are looking for.
+        </p>
+
+        <div class="form-grid">
+
+          <fieldset class="choice-group full-width">
+            <legend>Opportunity types</legend>
+
+            <p class="help-text">
+              Select all opportunities that interest you.
+            </p>
+
+            <div class="checkbox-grid">
+              <label>
+                <input
+                        type="checkbox"
+                        name="opportunities"
+                        value="open-source"
+                >
+                Open-source project
+              </label>
+
+              <label>
+                <input
+                        type="checkbox"
+                        name="opportunities"
+                        value="side-project"
+                >
+                Side project
+              </label>
+
+              <label>
+                <input
+                        type="checkbox"
+                        name="opportunities"
+                        value="freelance"
+                >
+                Freelance work
+              </label>
+
+              <label>
+                <input
+                        type="checkbox"
+                        name="opportunities"
+                        value="full-time"
+                >
+                Full-time job
+              </label>
+
+              <label>
+                <input
+                        type="checkbox"
+                        name="opportunities"
+                        value="internship"
+                >
+                Internship
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice-group full-width">
+            <legend>
+              Preferred working model
+              <span aria-hidden="true">*</span>
+            </legend>
+
+            <div class="choice-list horizontal-list">
+              <label>
+                <input
+                        type="radio"
+                        name="working-model"
+                        value="remote"
+                        required
+                >
+                Remote
+              </label>
+
+              <label>
+                <input
+                        type="radio"
+                        name="working-model"
+                        value="hybrid"
+                >
+                Hybrid
+              </label>
+
+              <label>
+                <input
+                        type="radio"
+                        name="working-model"
+                        value="on-site"
+                >
+                On-site
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-group full-width">
+            <label for="availability">
+              Weekly availability
+            </label>
+
+            <input
+                    type="range"
+                    id="availability"
+                    name="availability"
+                    min="1"
+                    max="40"
+                    step="1"
+                    value="20"
+                    aria-describedby="availability-help"
+            >
+
+            <div class="range-values" aria-hidden="true">
+              <span>1 hour</span>
+              <span>20 hours</span>
+              <span>40 hours</span>
+            </div>
+
+            <p id="availability-help" class="help-text">
+              Choose approximately how many hours you are
+              available each week.
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label for="start-date">
+              Preferred start date
+            </label>
+
+            <input
+                    type="date"
+                    id="start-date"
+                    name="start-date"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="time-zone">
+              Time zone
+              <span aria-hidden="true">*</span>
+            </label>
+
+            <select
+                    id="time-zone"
+                    name="time-zone"
+                    required
+            >
+              <option value="">Select your time zone</option>
+              <option value="utc-8">UTC−8</option>
+              <option value="utc-5">UTC−5</option>
+              <option value="utc">UTC</option>
+              <option value="utc+1">UTC+1</option>
+              <option value="utc+2">UTC+2</option>
+              <option value="utc+3">UTC+3</option>
+              <option value="utc+5">UTC+5</option>
+              <option value="utc+8">UTC+8</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="communication">
+              Communication preference
+              <span aria-hidden="true">*</span>
+            </label>
+
+            <select
+                    id="communication"
+                    name="communication"
+                    aria-describedby="communication-help"
+                    required
+            >
+              <option value="">
+                Select your preference
+              </option>
+              <option value="asynchronous">
+                Mostly asynchronous
+              </option>
+              <option value="balanced">
+                Balanced
+              </option>
+              <option value="meetings">
+                Regular live meetings
+              </option>
+            </select>
+
+            <p id="communication-help" class="help-text">
+              Asynchronous communication does not require
+              everyone to be online at the same time.
+            </p>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="additional-preferences">
+              Additional preferences
+            </label>
+
+            <textarea
+                    id="additional-preferences"
+                    name="additional-preferences"
+                    rows="5"
+                    maxlength="500"
+                    placeholder="Share any other preferences or requirements."
+                    aria-describedby="preferences-help"
+            ></textarea>
+
+
+            <p id="preferences-help" class="help-text">
+              Maximum 500 characters.
+            </p>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <div class="agreements">
+        <label class="agreement-option">
+          <input
+                  type="checkbox"
+                  name="terms"
+                  value="accepted"
+                  required
+          >
+
+          <span>
+                        I agree to the Terms of Service and Privacy Policy.
+                        <span aria-hidden="true">*</span>
+                    </span>
+        </label>
+
+        <label class="agreement-option">
+          <input
+                  type="checkbox"
+                  name="notifications"
+                  value="accepted"
+          >
+
+          <span>
+                        Send me opportunity notifications by email.
+                    </span>
+        </label>
+      </div>
+
+      <button type="submit" class="submit-button">
+        Create profile
+      </button>
+
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 DevMatch. Student project.</p>
+  </div>
+</footer>
+
+</body>
+
+</html>
